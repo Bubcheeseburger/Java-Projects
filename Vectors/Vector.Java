@@ -25,12 +25,6 @@ public class Vector<T> implements SimpleList<T> {
 		return this.itemArray.length;
 	}
 
-	/**
-	 * When the underlying array fills up, we need to somehow resize it to accommodate the
-	 * Vectors's elements.
-	 * Ignores the request if the requested new capacity is too small to fit the elements
-	 * already in the Vector
-	 */
 	public void resize(int newCapacity) {
 		// Changes the capacity to what the new one may be. If the new is bigger than old, then a new larger vector is
 		// made that replaces the old; if the new is less than the old and is still greater than the size, the capacity
@@ -60,6 +54,7 @@ public class Vector<T> implements SimpleList<T> {
 
 	@Override
 	public int size() {
+		// Returns the size of the Vector
 		return this.size;
 	}
 
@@ -78,11 +73,6 @@ public class Vector<T> implements SimpleList<T> {
 		int capacity = size() + 1;
 		size = capacity;
 		resize(capacity);
-//		for (int i = 0; i < size(); i++){
-//			if (itemArray[i] == null){
-//				itemArray[i] = item;
-//			}
-//		}
 		itemArray[size()-1] = item;
 	}
 
@@ -156,14 +146,9 @@ public class Vector<T> implements SimpleList<T> {
 		return item;
 	}
 
-	/*
-	 * This toString() method allow you to print a nicely formatted version of your Vector. E.g.
-	 *     System.out.println( myVector );
-	 * It uses utility methods in the Java Arrays library.
-	 */
 	@Override
 	public String toString() {
-//		return Arrays.toString(this.itemArray); // prints entire array from 0 to capacity-1
+		// Prints out the Array values by it's size, not the capacity
 		return Arrays.toString(Arrays.copyOfRange(this.itemArray, 0, this.size)); // prints from 0 to size-1
 	}
 
