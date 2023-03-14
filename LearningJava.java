@@ -5,7 +5,7 @@
 
 import java.util.Scanner;
 
-public class FourFunctions {
+public class LearningJava {
     public static boolean just8and9 ( int[] numbers ) {
         boolean all8and9 = true;
         for (int number : numbers) {
