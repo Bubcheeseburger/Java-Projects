@@ -1,4 +1,4 @@
-package vector;
+// This is the interface used by Vector
 
 public interface SimpleList<T> {
 	
