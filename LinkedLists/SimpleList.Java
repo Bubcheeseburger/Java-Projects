@@ -1,3 +1,5 @@
+// This is used // This is the interface used by LinkedList, this is just the basic methods for any lists
+
 public interface SimpleList<T> {
 
     /**
