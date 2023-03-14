@@ -96,44 +96,45 @@
         this.mem2 = tempValue;
     }
 
+    // Testing
     public static void main(String[] args){
         Calculations c = new Calculations();
         Calculations c2 = new Calculations(1,2,"+");
 
-        System.out.println(c);
-        System.out.println(c2);
+        System.out.println(c); // 0   0
+        System.out.println(c2); // 1 + 2
 
         c.setMem1(5);
         c.setMem2(7);
         c.setOp("+");
-        System.out.println(c);
-        System.out.println(c.perform());
+        System.out.println(c); // 5 + 7
+        System.out.println(c.perform()); // 12
 
         c.swap();
         c.setOp("-");
-        System.out.println(c);
-        System.out.println(c.perform());
+        System.out.println(c); // 12 - 5
+        System.out.println(c.perform()); // 7
 
         c.setOp("*");
-        System.out.println(c.perform());
+        System.out.println(c.perform()); // 84
 
         c.swap();
         c.setOp("/");
-        System.out.println(c);
-        System.out.println(c.perform());
+        System.out.println(c); // 84 / 12
+        System.out.println(c.perform()); // 7
 
-        System.out.println(c);
-        System.out.println("mem2 is " + c.getMem2());
+        System.out.println(c); // 84 / 7
+        System.out.println("mem2 is " + c.getMem2()); // mem2 is 7
 
-        System.out.println(c.performDiv());
+        System.out.println(c.performDiv()); // 12.0
 
         c.setMem2(0);
-        System.out.println(c.perform());
-        System.out.println(c);
+        System.out.println(c.perform()); // 0
+        System.out.println(c); // 84 / 0
 
         Calculations c3 = new Calculations(3,2,"+");
-        System.out.println(c3);
+        System.out.println(c3); // 3 + 2
         c3.setOp("9");
-        System.out.println(c3);
+        System.out.println(c3); // 3 + 2
     }
 }
