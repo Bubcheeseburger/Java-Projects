@@ -1,6 +1,5 @@
-// Ali Khan
-// pnv4bs
-// HW5 - Vector
+// This is a self made version of the Vector type of an array, the purpose is to understand exactly
+// the way this sort of array works
 
 package vector;
 
