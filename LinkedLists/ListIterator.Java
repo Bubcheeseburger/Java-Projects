@@ -2,11 +2,10 @@
 
 public class ListIterator<T> {
 
-    /* Current node (of type ListNode) */
     protected ListNode<T> curNode;
 
-    /* ListIterator constructor. Accepts the current node. */
     public ListIterator(ListNode<T> currentNode) {
+        // Changes the curNode to the one that was given
         curNode = currentNode;
     }
 
