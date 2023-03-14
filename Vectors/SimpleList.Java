@@ -1,4 +1,4 @@
-// This is the interface used by Vector, this is basically the skeleton for any lists
+// This is the interface used by Vector, this is just the basic methods for any lists
 
 public interface SimpleList<T> {
 	
